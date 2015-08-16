@@ -4,14 +4,15 @@
 	<meta charset=utf-8>
 	<title></title>
 	<style>
+	/*
 	ul{color: black}
 	/*ul.emphasis li{
 		/*this selector looks for all children under ul selector* /
-	}*/
+	}* /
 	ul.emphasis > li{
-		/*this selector looks for direct childre of parental ul selector*/
+		/*this selector looks for direct childre of parental ul selector* /
 		color:red;
-	}
+	} */
 	</style>
 </head>
 <body>
@@ -37,6 +38,20 @@
 			</li>
 		</ul>
 	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js" ></script>
+	<script>
+	$('ul.emphasis').children('li').css('color','green');
+	//the syntax means "look for li children of ul.emphasis and then set .css selector is color to be green"
+	//.children() looks for ONLY direct children
+
+
+	$('ul.emphasis').find('li').css('color','green');
+	//.find() can travers undirected children too. i.e. this function cares for grand-children too.
+
+	</script>
+
+
 
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Events</title>
+	<link rel="stylesheet" type="text/css" href="day.css">
+</head>
+<body>
+	<h1>My website</h1>
+	<button>Day</button>
+	<button>Night</button>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	<script type="text/javascript">
+	//listen if the button is clicked or not. there are few ways to do so.
+	(function(){
+		//target button tag, when the button is clicked, run function.
+		$('button').click(function()
+		{
+			//console.log(this);
+			//here 'this' referred to a specific button(in this case.whatever inside of $('html-tag')) that is clicked.
+			//HOWEVER, 'this' is not a jQuery object, which means we can not use jQuery functions.
+			//To make 'this' to be a jQuery object, we need to wrap 'this' by $()
+			$(this).text('changed');
+		});
+
+	})();//this syntax means that call this function when the browther opens up the page.
+	</script>
+</body>
+</html>
