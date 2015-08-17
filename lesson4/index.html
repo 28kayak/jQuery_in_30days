@@ -30,7 +30,17 @@
 				//button.click(); // or so. 
 			var stylesheet = $(this).data('file') //to access custum attribute, data function takes a parameter NAME of data-name in custum attributes.
 			console.log(stylesheet);//shows the text that associate with clicked button.
-			$('link').attr('href', stylesheet +'.css');
+			
+
+			//Optimization 
+			var link = $('link');// by using line varible, we do not need to jump in DOM every single time.
+
+
+
+
+
+			link.attr('href', stylesheet +'.css');
+
 
 
 		});
