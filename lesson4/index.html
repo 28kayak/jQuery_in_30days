@@ -28,8 +28,10 @@
 				//var button = $(button);
 			//then we can use the variable button as 
 				//button.click(); // or so. 
-			$('link').attr('href','night.css');
-			
+			var stylesheet = $(this).text().toLowerCase();//$(this) refferes a button with lowwecase 
+			console.log(stylesheet);//shows the text that associate with clicked button.
+			$('link').attr('href', stylesheet +'.css');
+
 
 		});
 
