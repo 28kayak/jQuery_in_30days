@@ -38,15 +38,12 @@
 			var stylesheet = $(this).data('file') //to access custum attribute, data function takes a parameter NAME of data-name in custum attributes.
 			console.log(stylesheet);//shows the text that associate with clicked button.
 			
-
+			link.attr('href', stylesheet +'.css');
 
 
 
 			//$(this).siblings();//.siblings() refferes other elements on the same level of 'this'.
-			$(this).siblings('button');//reffere other button elements on the same level of 'this'. 
-
-
-			link.attr('href', stylesheet +'.css');
+			$this.siblings('button').removeAttr('disabled');//reffere other button elements on the same level of 'this'.
 			$this.attr('disabled','disabled'); // allow a user to click one button once 
 
 
