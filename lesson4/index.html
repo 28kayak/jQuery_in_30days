@@ -21,13 +21,16 @@
 			//here 'this' referred to a specific button(in this case.whatever inside of $('html-tag')) that is clicked.
 			//HOWEVER, 'this' is not a jQuery object, which means we can not use jQuery functions.
 			//To make 'this' to be a jQuery object, we need to wrap 'this' by $()
-			$(this).text('changed');
+				//$(this).text('changed');
 
 
 			//To increase perfomance, you can store a html-tag warrped by jQuery object, which you want to use again and again, to //a js variable as:
-			var button = $(button);
+				//var button = $(button);
 			//then we can use the variable button as 
-			button.click(); // or so. 
+				//button.click(); // or so. 
+			$('link').attr('href','night.css');
+			
+
 		});
 
 	})();//this syntax means that call this function when the browther opens up the page.
