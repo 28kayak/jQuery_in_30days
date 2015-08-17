@@ -43,8 +43,11 @@
 
 
 			//$(this).siblings();//.siblings() refferes other elements on the same level of 'this'.
-			$this.siblings('button').removeAttr('disabled');//reffere other button elements on the same level of 'this'.
-			$this.attr('disabled','disabled'); // allow a user to click one button once 
+			$this
+				.siblings('button')
+				.removeAttr('disabled');//reffere other button elements on the same level of 'this'.
+				.end()//reffere back to the element that is selected(clicked)
+				.attr('disabled','disabled'); // allow a user to click one button once 
 
 
 
