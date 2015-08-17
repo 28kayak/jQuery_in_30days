@@ -28,18 +28,26 @@
 				//var button = $(button);
 			//then we can use the variable button as 
 				//button.click(); // or so. 
+
+
+
+
+			//Optimization -------------------------------------------------------------------------------------------------------	
+			var $this = $(this);//cash what currently 'this' reffers
+			var link = $('link');// by using line varible, we do not need to jump in DOM every single time.
 			var stylesheet = $(this).data('file') //to access custum attribute, data function takes a parameter NAME of data-name in custum attributes.
 			console.log(stylesheet);//shows the text that associate with clicked button.
 			
 
-			//Optimization 
-			var link = $('link');// by using line varible, we do not need to jump in DOM every single time.
 
 
 
+			//$(this).siblings();//.siblings() refferes other elements on the same level of 'this'.
+			$(this).siblings('button');//reffere other button elements on the same level of 'this'. 
 
 
 			link.attr('href', stylesheet +'.css');
+			$this.attr('disabled','disabled'); // allow a user to click one button once 
 
 
 
